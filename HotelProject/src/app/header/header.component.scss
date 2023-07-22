@@ -1,31 +1,32 @@
 .navbar{
+    width: 100%;
     background-color: #7a10dd;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+    display:flex;
+    justify-content:space-between;
     padding-left: 5%;
     padding-right: 5%;
     height: 60px;
+    position: relative;
+    align-items: center;
+    margin: 0%; 
+    margin-right: 0%   
 };
 
 .navbar h1 a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: math;
     font-size: 31px;
     font-weight: bolder;
     color: white;
-    padding-top: 15px;
     text-shadow: 3.8px 0.8px black;
     text-decoration: none;
+    margin: -1%;
+    padding-top: 5px;
+    position: absolute;
+  
 };
 
 
 .navbar h1 span{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: math;
     font-size: 25px;
     font-weight: bolder;
@@ -33,61 +34,80 @@
    padding-top: 2px;
 };
 
+.navbar div{
+    position: absolute;
+    margin-left: 187px;
+}
+
 .navbar .searchbar input{
-    flex: 1;
     color: rgb(0, 0, 0);
     border: 2px solid black;
     height: 35px;
     border-right: 0px;
     width: 400px;
-    margin-top: 10px;
+    margin-top: 1px;
+    margin-left: 70px;
     border-radius: 10px;
     padding-left: 15px;
+
 };
 
 
 .navbar .searchbar button {
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     background-color: #7a10dd;
     height: 42px;
     width: 97px;
     border: 2px solid black;
     border-radius: 5px;
     margin-left: -13px;
+    margin-right: 10px;
     font-family: auto;
     font-size: 18px;
+    position: absolute
 };
 
 .navbar ul{
     display: inline-flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
-
+    margin-left: 780px;
+    padding: 0px;
 };
 
 .navbar li{
     padding-left: 15px;
-    padding-top: 18px;
-
+    padding-top: 1px;
 };
 
 .navbar li a{
+    text-decoration: none;
     font-size: 20px;
     font-weight: inherit;
     color: white;
     font-family: cursive;
-    text-decoration: none;
 };
 
 .navbar h1,.navbar .searchbar input:hover{
     cursor: pointer; 
 };
 
-.navbar .searchbar button,.navbar li a:hover{
+.navbar .searchbar button:hover {
     cursor: pointer;
-
+    height: 44px;
+    width: 100px;
+    
+    
 };
+
+.navbar ul li a:hover {
+    cursor: pointer;
+    color: rgb(255, 217, 0);
+    font-size: 22px;
+    
+};
+
+
+
 
 
 
