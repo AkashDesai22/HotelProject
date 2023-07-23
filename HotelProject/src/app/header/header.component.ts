@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  logo="HotelProject/HotelProject/src/assets/HotelProjectImages/Hotelwala.png";
+ 
+ 
+ 
+
 }
