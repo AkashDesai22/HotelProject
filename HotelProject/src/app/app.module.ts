@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomescreenComponent } from './homescreen/homescreen.component';
 import {MatButtonModule} from '@angular/material/button';
 import { HeaderComponent } from './header/header.component';
+import { ShareModule } from 'Common/share/share.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HeaderComponent } from './header/header.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    ShareModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

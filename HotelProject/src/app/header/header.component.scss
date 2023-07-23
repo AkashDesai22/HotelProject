@@ -3,13 +3,21 @@
     background-color: #7a10dd;
     display:flex;
     justify-content:space-between;
-    padding-left: 5%;
     padding-right: 5%;
     height: 60px;
     position: relative;
     align-items: center;
     margin: 0%; 
-    margin-right: 0%   
+    margin-right: 0%;
+   
+
+};
+
+.logo{
+    height: 139px;
+    width: 155px;
+    margin-left: -79px;
+    padding-top: 11px;
 };
 
 .navbar h1 a{
@@ -22,6 +30,7 @@
     margin: -1%;
     padding-top: 5px;
     position: absolute;
+    margin-left: -48px;
   
 };
 
@@ -87,7 +96,7 @@
     font-family: cursive;
 };
 
-.navbar h1,.navbar .searchbar input:hover{
+.navbar h1,.logo,.navbar .searchbar input:hover{
     cursor: pointer; 
 };
 
@@ -103,8 +112,8 @@
     cursor: pointer;
     color: rgb(255, 217, 0);
     font-size: 22px;
-    
 };
+
 
 
 

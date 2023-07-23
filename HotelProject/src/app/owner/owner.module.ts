@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { OwnerRoutingModule } from './owner-routing.module';
 import { OwnerhomeComponent } from './ownerhome/ownerhome.component';
+import { ShareModule } from 'Common/share/share.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { OwnerhomeComponent } from './ownerhome/ownerhome.component';
   ],
   imports: [
     CommonModule,
-    OwnerRoutingModule
+    OwnerRoutingModule,
+    ShareModule,
   ]
 })
 export class OwnerModule { }
