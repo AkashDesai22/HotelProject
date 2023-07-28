@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validator, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ export class OwnerhomeComponent {
 
   img1:any="/assets/HotelProjectImages/hotelwalaLogoFinal.png";
   ownerLoginForm!:FormGroup;
-  hide :boolean= true;
+  hide = true;
 
   constructor(private fb:FormBuilder,
               private route:Router){};
@@ -25,9 +25,9 @@ this.ownerLoginData();
   ownerLoginData(){
     this.ownerLoginForm=this.fb.group({
      
-      OwnerEmail:['',[]],
+      Email:['',[]],
 
-      OwnerPassword:['',[Validators.required,]],
+      Password:['',[Validators.required,]],
     })
   };
 

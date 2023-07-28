@@ -19,7 +19,7 @@ export class HomescreenComponent {
   journey(journey:string){
     
   if(journey==="user"){
-      this.commonService.journey="user";
+      this.commonService.journey="User";
       this.route.navigateByUrl("user");
     }
     else if(journey==="owner"){
@@ -27,7 +27,7 @@ export class HomescreenComponent {
       this.route.navigateByUrl("owner");
     }
     else if(journey==="admin"){
-      this.commonService.journey="admin";
+      this.commonService.journey="Admin";
       this.route.navigateByUrl("admin");
     }
   };

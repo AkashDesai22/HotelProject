@@ -8,8 +8,9 @@ const routes: Routes = [
   {path: "" ,
 component : OwnerhomeComponent},
 
-{path: "ownerSignUp" ,
-component : OwnersignupComponent}
+{path: "ownerSignUp",
+component : OwnersignupComponent},
+
 
 ];
 

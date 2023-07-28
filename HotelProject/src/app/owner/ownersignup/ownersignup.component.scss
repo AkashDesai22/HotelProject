@@ -1,0 +1,104 @@
+form{
+    margin: auto;
+    width: 424px;
+    height: 900Spx;
+    padding: 10px 10px 10px 10px;
+    background: #e9cfec;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+};
+
+form span{
+    margin-top: 2%;
+    font-family: emoji;
+    font-weight: bolder;
+    font-size: 32px;
+    text-shadow: 1px 2px yellow;
+};
+
+.firstName {
+    margin-top: 3%;
+    width: 40%;
+};
+
+.lastName{
+    margin-top: 3%;
+    width: 40%;
+
+};
+
+mat-hint{
+    width: 400px
+    
+};
+
+form .Email{
+    margin-top: 1%;
+    width: 79%;
+};
+
+.MobileNo{
+    margin-top: 1%;
+    width: 79%;
+};
+
+.Pancard{
+    margin-top: 1%;
+    width: 79%;
+};
+
+.Gender{
+    margin-top: 1%;
+    width: 79%;
+};
+
+.Address{
+    margin-top:-18px;
+    width: 79%;
+};
+
+.City{
+    margin-top: 1%;
+    width: 40%;  
+};
+
+.PostalCode{
+    margin-top: 1%;
+    width: 40%;  
+};
+
+.Password{
+    margin-top: 1%;
+    width: 79%; 
+};
+
+.ConfirmPassword{
+    margin-top: 1%;
+    width: 79%;
+};
+
+.submitbutton{
+    width:80%;
+};
+
+form p{
+    text-align: center;
+    font-family: math;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold
+};
+
+form a{
+    text-decoration: none;
+};
+
+form a:hover{
+    font-size: 22px;
+    color: #c11717;
+    cursor: pointer;
+};
+
+
+
