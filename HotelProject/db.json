@@ -1,0 +1,21 @@
+{
+  "User": [],
+  "Owner": [
+    {
+      "FirstName": "Akash",
+      "LastName": "Desai",
+      "Email": "akash@gmail.com",
+      "MobileNo": "9850004598",
+      "PanCardDetails": "AZLPD6780A",
+      "Gender": "Male",
+      "Address": "At/Post:Yelgaon,Tal:Karad,Dist:Satara",
+      "City": "Karad",
+      "PostalCode": "415111",
+      "Password": "Akash@123",
+      "ConfirmPassword": "Akash@123",
+      "id": 1
+    }
+  ],
+  "Admin": [],
+  "HotelDetails": []
+}
