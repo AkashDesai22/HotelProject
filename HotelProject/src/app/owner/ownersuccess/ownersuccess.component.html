@@ -1,1 +1,59 @@
-<p>ownersuccess works!</p>
+<div>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home" (click)="drawer.toggle()"
+      class="homeIcon"></mat-icon>
+    <br>
+    <br>
+    <button mat-raised-button color="accent" class="btnSize" (click)="myHotelDetails()">
+      My Hotels
+    </button>
+    <br>
+    <br>
+    <button mat-raised-button color="accent" class="btnSize" (click)="hotelRegistrationForm()">
+      Hotel Registration
+    </button>
+    <br>
+    <br>
+
+  </mat-drawer>
+  
+
+  <div class="example-sidenav-content">
+    <button class="button" type="button" mat-raised-button color="accent" (click)="drawer.toggle()">
+      Owner Home
+    </button>
+  <div class="showHotelDetails" *ngIf="showTable">
+  <div *ngIf="userHotelsList.length > 0 && showTable">
+  <mat-card *ngFor="let hotelData of userHotelsList" class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title class="title">{{hotelData.HotelName}}</mat-card-title>
+      <mat-card-subtitle class="location">Location : {{hotelData.City}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/HotelProjectImages/ownerbackground.jpg" alt="{{hotelData.HotelName}}">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  <br>
+<br>
+</div>
+</div>
+<br>
+<br>
+
+
+  </div>
+
+</mat-drawer-container>
+</div>
+

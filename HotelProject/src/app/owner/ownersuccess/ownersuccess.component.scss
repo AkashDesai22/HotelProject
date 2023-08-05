@@ -1,0 +1,106 @@
+
+.example-container {
+  width: 1650px;
+  height: 1650px;
+  background-color:  #fff1e6;
+  padding-left: 150px;
+ 
+
+};
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top:auto;
+ 
+
+};
+
+.button{
+    margin-top: -1585px;
+    margin-left: -1360px;
+
+};
+
+.homeIcon{
+    background-color: #DC143C;
+    color: white;
+    width: 25px;
+    height: 25px;
+   padding: 10px 12px 10px 12px;
+   border-radius: 5px;
+   margin-top: 20px;
+   border: 1px solid white;
+
+};
+
+.btnSize {
+    width: 250px;
+    
+};
+
+.homeIcon:hover{
+    cursor: pointer;
+    color: yellow;
+  
+};
+
+.btnSize:hover{
+    cursor: pointer;
+    color: yellow;
+};
+
+.example-sidenav {
+  padding: 5px;
+  background-color: blueviolet;
+  margin-top: 0px;
+  width: 285px;
+  height: 100%;
+
+};
+
+.showHotelDetails{
+
+  margin-left: 1000px;
+  margin-top: auto;
+ 
+};
+
+.example-card {
+  max-width: 400px;
+  background-color: #ff77ff;
+  box-shadow: 0 0 20px 10px #df00ff ;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  display:flex;
+};
+
+.example-header-image {
+  width: 80px;
+  height: 80px;
+  background-image: url("/assets/HotelProjectImages/hotelwalalogo.png");
+  background-size: cover;
+
+};
+
+.title{
+  font-family: math;
+  font-size: 25px;
+  font-weight: bolder;
+  padding-top: 23px;
+  font-size: 28px;
+  color:black;
+  margin-top: 5px;
+};
+
+.location{
+  font-family:serif;
+  font-size: 10px;
+  padding-top: 3px;
+  font-size: 17px;
+  color:white;
+  text-align: center;
+}

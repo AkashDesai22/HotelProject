@@ -1,4 +1,4 @@
-<h1>Signup Form</h1>
+
 
 <form [formGroup]="ownerSignUpForm">
     <span>Owner SignUp</span>
@@ -228,7 +228,7 @@
         <br>
         <mat-form-field class="Password" appearance="outline">
             <mat-label>Enter Your Password</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'" formControlName="Password" value="Password" autocomplete="off" required placeholder="pass@123" (keyup)="passwordMatch()">
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="Password" value="Password" autocomplete="off" required placeholder="pass@123">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
@@ -263,7 +263,7 @@
           <br>
           <mat-form-field class="ConfirmPassword" appearance="outline">
             <mat-label>Confirm Your Password</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'" formControlName="ConfirmPassword" value="ConfirmPassword" autocomplete="off" required placeholder="pass@123" (keyup)="confirmPasswordmatch()">
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="ConfirmPassword" value="ConfirmPassword" autocomplete="off" required placeholder="pass@123" >
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>

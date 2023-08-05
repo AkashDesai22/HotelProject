@@ -1,0 +1,344 @@
+<!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home" class="homeIcon" (click)="BackToOwnerHome()"></mat-icon> -->
+<button class="BackBtn" (click)="BackToOwnerHome()" mat-raised-button color="accent">Back</button>
+
+
+
+<form [formGroup]="HotelRegistration">
+    <span>Hotel Registration</span>
+    <br>
+    <mat-form-field class="firstName" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input  matInput placeholder="Placeholder" formControlName="firstName" required>
+        <mat-error
+            *ngIf="HotelRegistration.get('firstName')?.touched
+            && !HotelRegistration.get('firstName')?.valid
+            && !HotelRegistration.get('firstName')?.dirty
+            && !HotelRegistration.get('firstName')?.errors?.['minlength']">First Name Is Required</mat-error>
+        <mat-error
+            *ngIf="HotelRegistration.get('firstName')?.dirty 
+            && HotelRegistration.get('firstName')?.touched
+            && !HotelRegistration.get('firstName')?.valid
+            && !HotelRegistration.get('firstName')?.errors?.['minlength']">First Name Is Required</mat-error> 
+            <mat-hint
+            *ngIf="HotelRegistration.get('firstName')?.errors?.['required']
+            && !HotelRegistration.get('firstName')?.valid
+            && !HotelRegistration.get('firstName')?.touched
+            && !HotelRegistration.get('firstName')?.dirty">Enter First Name</mat-hint>
+        <mat-error
+            *ngIf="HotelRegistration.get('firstName')?.errors?.['pattern']
+            && !HotelRegistration.get('firstName')?.errors?.['required']">Enter
+            Alphabates Only</mat-error>
+            <mat-error
+            *ngIf="HotelRegistration.get('firstName')?.errors?.['minlength']
+            && !HotelRegistration.get('firstName')?.valid
+            && !HotelRegistration.get('firstName')?.errors?.['pattern']
+            && !HotelRegistration.get('firstName')?.errors?.['required']">Enter Minimum 2 Characters
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field class="lastName" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="lastName">
+        <mat-error
+        *ngIf="HotelRegistration.get('lastName')?.touched
+        && !HotelRegistration.get('lastName')?.valid
+        && !HotelRegistration.get('lastName')?.dirty">Last Name Is Required</mat-error>
+        <mat-error
+            *ngIf="HotelRegistration.get('lastName')?.dirty 
+            && HotelRegistration.get('lastName')?.touched
+            && !HotelRegistration.get('lastName')?.valid
+            && !HotelRegistration.get('lastName')?.errors?.['minlength']">Last Name Is Required</mat-error>
+        <mat-hint
+        *ngIf="HotelRegistration.get('lastName')?.errors?.['required']
+        && !HotelRegistration.get('lastName')?.valid
+        && !HotelRegistration.get('lastName')?.touched
+        && !HotelRegistration.get('lastName')?.dirty">Enter Last Name</mat-hint>
+    <mat-error
+        *ngIf="HotelRegistration.get('lastName')?.errors?.['pattern']">Enter
+        Alphabates Only</mat-error>
+        <mat-error
+        *ngIf="HotelRegistration.get('lastName')?.errors?.['minlength']
+        && !HotelRegistration.get('lastName')?.valid
+        && !HotelRegistration.get('lastName')?.errors?.['pattern']">Enter Minimum 2 Characters
+    </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="hotelName" appearance="outline">
+        <mat-label>Hotel Name</mat-label>
+        <input  matInput placeholder="Placeholder" formControlName="hotelName" required>
+        <mat-error
+            *ngIf="HotelRegistration.get('hotelName')?.touched
+            && !HotelRegistration.get('hotelName')?.valid
+            && !HotelRegistration.get('hotelName')?.dirty
+            && !HotelRegistration.get('hotelName')?.errors?.['minlength']">Hotel Name Is Required</mat-error>
+        <mat-error
+            *ngIf="HotelRegistration.get('hotelName')?.dirty 
+            && HotelRegistration.get('hotelName')?.touched
+            && !HotelRegistration.get('hotelName')?.valid
+            && !HotelRegistration.get('hotelName')?.errors?.['minlength']">Hotel Name Is Required</mat-error> 
+            <mat-hint
+            *ngIf="HotelRegistration.get('hotelName')?.errors?.['required']
+            && !HotelRegistration.get('hotelName')?.valid
+            && !HotelRegistration.get('hotelName')?.touched
+            && !HotelRegistration.get('hotelName')?.dirty">Enter Hotel Name</mat-hint>
+        <mat-error
+            *ngIf="HotelRegistration.get('hotelName')?.errors?.['pattern']
+            && !HotelRegistration.get('hotelName')?.errors?.['required']">Enter
+            Alphabates Only</mat-error>
+            <mat-error
+            *ngIf="HotelRegistration.get('hotelName')?.errors?.['minlength']
+            && !HotelRegistration.get('hotelName')?.valid
+            && !HotelRegistration.get('hotelName')?.errors?.['pattern']
+            && !HotelRegistration.get('hotelName')?.errors?.['required']">Enter Minimum 2 Characters
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field class="Email" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="Email" placeholder="Ex. abc@example.com">
+        <mat-error
+            *ngIf="HotelRegistration.get('Email')?.touched
+            && !HotelRegistration.get('Email')?.valid
+            && !HotelRegistration.get('Email')?.dirty">Email is Required</mat-error>
+            <mat-error
+            *ngIf="HotelRegistration.get('Email')?.dirty 
+            && HotelRegistration.get('Email')?.touched
+            && !HotelRegistration.get('Email')?.valid
+            && !HotelRegistration.get('Email')?.errors?.['minlength']">Email Is Required</mat-error>
+            <mat-hint
+            *ngIf="HotelRegistration.get('Email')?.errors?.['required']
+            && !HotelRegistration.get('Email')?.valid
+            && !HotelRegistration.get('Email')?.touched
+            && !HotelRegistration.get('Email')?.dirty">Please Enter Hotel Email</mat-hint>
+        <mat-error
+            *ngIf="HotelRegistration.get('Email')?.errors?.['email'] "> Please Enter Correct Email
+        </mat-error>
+      </mat-form-field>
+      <br>
+        <mat-form-field class="MobileNo" appearance="outline">
+          <mat-label>Mobile Number</mat-label>
+          <h2 matPrefix> &nbsp;+91 &nbsp;</h2>
+          <input type="tel" matInput formControlName="MobileNo" placeholder="9876543210" maxlength="10">
+          <mat-error
+            *ngIf="HotelRegistration.get('MobileNo')?.touched
+            && !HotelRegistration.get('MobileNo')?.valid
+            && !HotelRegistration.get('MobileNo')?.dirty">Contact Number is Required</mat-error>
+            <mat-error
+            *ngIf="HotelRegistration.get('MobileNo')?.dirty 
+            && HotelRegistration.get('MobileNo')?.touched
+            && !HotelRegistration.get('MobileNo')?.valid
+            && !HotelRegistration.get('MobileNo')?.errors?.['minlength']">Contact Number Is Required</mat-error>
+            <mat-hint
+            *ngIf="HotelRegistration.get('MobileNo')?.errors?.['required']
+            && !HotelRegistration.get('MobileNo')?.valid
+            && !HotelRegistration.get('MobileNo')?.touched
+            && !HotelRegistration.get('MobileNo')?.dirty">Please Enter Hotel Contact Number</mat-hint>
+            <mat-error *ngIf="HotelRegistration.get('MobileNo')?.errors?.['pattern']">Invalid Contact Number</mat-error>
+            <mat-error *ngIf="HotelRegistration.get('MobileNo')?.errors?.['minlength']
+            && !HotelRegistration.get('MobileNo')?.valid
+            && !HotelRegistration.get('MobileNo')?.errors?.['pattern'] ">Enter Minimum 10 Numbers</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="Pancard" appearance="outline">
+            <mat-label>Pan Card Details</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="panDetails" required maxlength="10">
+            <mat-error
+                *ngIf="HotelRegistration.get('panDetails')?.touched
+                && !HotelRegistration.get('panDetails')?.valid
+                && !HotelRegistration.get('panDetails')?.dirty">PAN Card Details Required</mat-error>
+                <mat-error
+                *ngIf="HotelRegistration.get('panDetails')?.dirty 
+                && HotelRegistration.get('panDetails')?.touched
+                && !HotelRegistration.get('panDetails')?.valid
+                && !HotelRegistration.get('panDetails')?.errors?.['minlength']">PAN Card Details Required</mat-error>
+                <mat-hint
+                *ngIf="HotelRegistration.get('panDetails')?.errors?.['required']
+                && !HotelRegistration.get('panDetails')?.valid
+                && !HotelRegistration.get('panDetails')?.touched 
+                && !HotelRegistration.get('panDetails')?.dirty">Please Enter PAN Number</mat-hint>
+            <mat-error
+                *ngIf="HotelRegistration.get('panDetails')?.errors?.['pattern']">Invaid PAN Card Details</mat-error>
+                <mat-error
+                *ngIf="HotelRegistration.get('panDetails')?.errors?.['minlength']
+                && !HotelRegistration.get('panDetails')?.valid
+                && !HotelRegistration.get('panDetails')?.errors?.['pattern']">Enter Minimum 10 Characters
+            </mat-error>
+        </mat-form-field>
+        <br>
+        <br>
+        <mat-form-field class="Address" appearance="outline">
+            <mat-label>Address</mat-label>
+            <textarea formControlName="Address" matInput placeholder="Hose No,Street etc." required maxlength="50">Hose No,Apartment,Street</textarea>
+            <mat-error
+            *ngIf="HotelRegistration.get('Address')?.touched
+            && !HotelRegistration.get('firstName')?.valid
+            && !HotelRegistration.get('firstName')?.dirty
+            && !HotelRegistration.get('Address')?.errors?.['minlength']">Address Is Required</mat-error>
+            <mat-error
+            *ngIf="HotelRegistration.get('Address')?.dirty 
+            && HotelRegistration.get('Address')?.touched
+            && !HotelRegistration.get('Address')?.valid
+            && !HotelRegistration.get('Address')?.errors?.['minlength']">Address Is Required</mat-error>
+            <mat-hint
+            *ngIf="HotelRegistration.get('Address')?.errors?.['required']
+            && !HotelRegistration.get('Address')?.valid
+            && !HotelRegistration.get('Address')?.touched
+            && !HotelRegistration.get('Address')?.dirty">Please Enter Your Address</mat-hint>
+        <mat-error
+            *ngIf="HotelRegistration.get('Address')?.errors?.['pattern']
+            && !HotelRegistration.get('Address')?.errors?.['required']">Please Enter Correct Address</mat-error>
+            <mat-error
+            *ngIf="HotelRegistration.get('Address')?.errors?.['minlength']
+            && !HotelRegistration.get('Address')?.valid
+            && !HotelRegistration.get('Address')?.errors?.['pattern']
+            && !HotelRegistration.get('Address')?.errors?.['required']">Enter Minimum 10 Characters
+        </mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="City" appearance="outline">
+            <mat-label>City</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="City" required maxlength="25">
+            <mat-error
+                *ngIf="HotelRegistration.get('City')?.touched
+                && !HotelRegistration.get('City')?.valid
+                && !HotelRegistration.get('City')?.dirty">City is Required</mat-error>
+                <mat-error
+            *ngIf="HotelRegistration.get('City')?.dirty 
+            && HotelRegistration.get('City')?.touched
+            && !HotelRegistration.get('City')?.valid
+            && !HotelRegistration.get('City')?.errors?.['minlength']">City Is Required</mat-error>
+                <mat-hint
+                *ngIf="HotelRegistration.get('City')?.errors?.['required']
+                && !HotelRegistration.get('City')?.valid
+                && !HotelRegistration.get('City')?.touched
+                && !HotelRegistration.get('City')?.dirty">Enter Your City</mat-hint>
+            <mat-error
+                *ngIf="HotelRegistration.get('City')?.errors?.['pattern']">Enter
+                Alphabates Only</mat-error>
+                <mat-error
+                *ngIf="HotelRegistration.get('City')?.errors?.['minlength']
+                && !HotelRegistration.get('City')?.valid
+                && !HotelRegistration.get('City')?.errors?.['pattern']">Enter Minimum 2 Characters
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="PostalCode" appearance="outline">
+            <mat-label>Postal Code</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="PostalCode" required maxlength="6">
+            <mat-error
+            *ngIf="HotelRegistration.get('PostalCode')?.touched
+            && !HotelRegistration.get('PostalCode')?.valid
+            && !HotelRegistration.get('PostalCode')?.dirty">Postal Code Required</mat-error>
+            <mat-error
+            *ngIf="HotelRegistration.get('PostalCode')?.dirty 
+            && HotelRegistration.get('PostalCode')?.touched
+            && !HotelRegistration.get('PostalCode')?.valid
+            && !HotelRegistration.get('PostalCode')?.errors?.['minlength']">PostalCode Is Required</mat-error>
+            <mat-hint
+            *ngIf="HotelRegistration.get('PostalCode')?.errors?.['required']
+            && !HotelRegistration.get('PostalCode')?.valid
+            && !HotelRegistration.get('PostalCode')?.touched
+            && !HotelRegistration.get('PostalCode')?.dirty">Enter Postal Code</mat-hint>
+        <mat-error
+            *ngIf="HotelRegistration.get('PostalCode')?.errors?.['pattern']">Enter
+            Numbers Only</mat-error>
+            <mat-error
+            *ngIf="HotelRegistration.get('PostalCode')?.errors?.['minlength']
+            && !HotelRegistration.get('PostalCode')?.valid
+            && !HotelRegistration.get('PostalCode')?.errors?.['pattern']">Enter 6 Numbers
+        </mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="state" appearance="outline">
+            <mat-label>Select Your State</mat-label>
+            <mat-select formControlName="State">
+              <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+            </mat-select>
+            <mat-error
+            *ngIf="HotelRegistration.get('State')?.touched
+            && !HotelRegistration.get('State')?.valid
+            && !HotelRegistration.get('State')?.dirty">State is Required</mat-error>
+            <mat-hint
+            *ngIf="HotelRegistration.get('State')?.errors?.['required']
+            && !HotelRegistration.get('State')?.valid
+            && !HotelRegistration.get('State')?.touched
+            && !HotelRegistration.get('State')?.dirty">Select Your State</mat-hint>
+          </mat-form-field>
+        <br>
+        <mat-form-field class="HotelMenue" appearance="outline">
+            <mat-label>Select Hotel Menue type</mat-label>
+            <mat-select formControlName="HotelMenue" disableRipple>
+              <mat-option value="Veg">Veg</mat-option>
+              <mat-option value="Nonveg">Nonveg</mat-option>
+              <mat-option value="Veg & Nonveg">Veg & Nonveg</mat-option>
+            </mat-select>
+            <mat-error
+            *ngIf="HotelRegistration.get('HotelMenue')?.touched
+            && !HotelRegistration.get('HotelMenue')?.valid
+            && !HotelRegistration.get('HotelMenue')?.dirty">Hotel Menues are Required</mat-error>
+            <mat-hint
+            *ngIf="HotelRegistration.get('HotelMenue')?.errors?.['required']
+            && !HotelRegistration.get('HotelMenue')?.valid
+            && !HotelRegistration.get('HotelMenue')?.touched
+            && !HotelRegistration.get('HotelMenue')?.dirty">Select Hotel Menues</mat-hint>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="RoomsAvailable" appearance="outline">
+            <mat-label>Rooms Available</mat-label>
+            <input type="number" matInput formControlName="RoomsAvailable">
+            <mat-error
+              *ngIf="HotelRegistration.get('RoomsAvailable')?.touched
+              && !HotelRegistration.get('RoomsAvailable')?.valid
+              && !HotelRegistration.get('RoomsAvailable')?.dirty">Please Enter Available Hotel Rooms </mat-error>
+              <mat-error
+              *ngIf="HotelRegistration.get('RoomsAvailable')?.dirty 
+              && HotelRegistration.get('RoomsAvailable')?.touched
+              && !HotelRegistration.get('RoomsAvailable')?.valid">Please Enter Available Hotel Rooms</mat-error>
+              <mat-hint
+              *ngIf="HotelRegistration.get('RoomsAvailable')?.errors?.['required']
+              && !HotelRegistration.get('RoomsAvailable')?.valid
+              && !HotelRegistration.get('RoomsAvailable')?.touched
+              && !HotelRegistration.get('RoomsAvailable')?.dirty">Please Enter Available Hotel Rooms</mat-hint>
+              <mat-error *ngIf="HotelRegistration.get('RoomsAvailable')?.errors?.['pattern']">Enter Nubers Only</mat-error>
+          </mat-form-field>
+        <br>
+        <mat-form-field class="Password" appearance="outline">
+            <mat-label>Enter Your Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="Password" value="Password" autocomplete="off" required placeholder="P ass@123">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error
+            *ngIf="HotelRegistration.get('Password')?.touched
+            && !HotelRegistration.get('Password')?.valid
+            && !HotelRegistration.get('Password')?.dirty
+            && !HotelRegistration.get('Password')?.errors?.['pattern']">Password is Required</mat-error>
+            <mat-error
+            *ngIf="HotelRegistration.get('Password')?.dirty 
+            && HotelRegistration.get('Password')?.touched
+            && !HotelRegistration.get('Password')?.valid
+            && !HotelRegistration.get('Password')?.errors?.['minlength']
+            && !HotelRegistration.get('Password')?.errors?.['pattern']">Password Is Required</mat-error>
+            <mat-hint
+            *ngIf="HotelRegistration.get('Password')?.errors?.['required']
+            && !HotelRegistration.get('Password')?.valid
+            && !HotelRegistration.get('Password')?.touched
+            && !HotelRegistration.get('Password')?.dirty">Please Enter Your Password</mat-hint>
+            <mat-error
+            *ngIf="HotelRegistration.get('Password')?.errors?.['pattern']
+            && !HotelRegistration.get('Password')?.errors?.['required']">Password Pattern Not Matched</mat-error>
+            <mat-error
+            *ngIf="HotelRegistration.get('Password')?.errors?.['minlength']
+            && !HotelRegistration.get('Password')?.valid
+            && !HotelRegistration.get('Password')?.errors?.['pattern']">Please Enter Minimum 8 Characters</mat-error>
+            <mat-error
+            *ngIf="!isMatch && HotelRegistration.get('Password')?.dirty
+            && !HotelRegistration.get('Password')?.errors?.['pattern']">Password Not Matched</mat-error>
+          </mat-form-field> 
+        <br>
+        <br>
+              <button class="submitbutton" [disabled]="!HotelRegistration.valid"  (click)="Submit(HotelRegistration.value)"
+            mat-raised-button color="accent">Submit</button>
+            <br>
+            <br>
+            <button class="submitbutton" (click)="BackToOwnerHome()"
+            mat-raised-button color="accent">Back</button>
+
+</form>

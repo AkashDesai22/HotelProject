@@ -18,5 +18,12 @@ url:string= "http://localhost:3000/";
 
       return this.http.post(url,requestData);
 
+  };
+
+  getApiCall(endpoint:any){
+    let url=this.url+ endpoint;
+
+   return this.http.get(url);
+    
   }
 }

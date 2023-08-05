@@ -19,10 +19,6 @@ const routes: Routes = [
   {path : "admin", 
    loadChildren:()=>import("./admin/admin.module").then((mod)=>mod.AdminModule)},
 
-   {path : "ownerSignUp",
-  loadChildren:()=>import("./owner/owner.module").then((mod)=>mod.OwnerModule)},
-
-
 ];
 
 @NgModule({

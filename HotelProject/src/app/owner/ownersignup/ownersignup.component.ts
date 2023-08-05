@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApicallService } from 'Common/apicall.service';
 import { CommonService } from 'Common/common.service';
 
@@ -18,16 +19,20 @@ export class OwnersignupComponent {
   isMatch!:boolean;
   isConfirmMatch!:boolean;
   endpoint!:string;
-  postApiSignupData!: Object;
+  postApiSignupData!: any;
   
 
   constructor(private formBuilder:FormBuilder,
               private commonService:CommonService,
-              private apiCallService:ApicallService){};
+              private apiCallService:ApicallService,
+              private route:Router){};
 
+ ngOnInit(){
+console.log(".....................");
+    
+this.endpoint=this.commonService.journey;
+console.log("this.endpoint=>",this.endpoint);
 
-  ngOnInit(){
-this.endpoint =this.commonService.journey;
 this.ownerSignUpFormData();
 
   };
@@ -61,25 +66,25 @@ this.ownerSignUpFormData();
     })
   }; 
 
-  passwordMatch(){
-this.passwordValue=this.ownerSignUpForm.value.Password;
-console.log('this.passwordValue=>',this.passwordValue);
-if(this.passwordValue===this.confirmPassValue){
-this.isMatch=true;
-}else{
-  this.isMatch=false;
-}
-  };
+//   passwordMatch(){
+// this.passwordValue=this.ownerSignUpForm.value.Password;
+// console.log('this.passwordValue=>',this.passwordValue);
+// if(this.passwordValue===this.confirmPassValue){
+// this.isMatch=true;
+// }else{
+//   this.isMatch=false;
+// }
+//   };
 
-  confirmPasswordmatch(){
-this.confirmPassValue=this.ownerSignUpForm.value.ConfirmPassword;
-console.log('this.confirmPassValue',this.confirmPassValue);
-if(this.passwordValue===this.confirmPassValue){
-  this.isMatch=true;
-  }else{
-    this.isMatch=false;
-  }
-  };
+//   confirmPasswordmatch(){
+// this.confirmPassValue=this.ownerSignUpForm.value.ConfirmPassword;
+// console.log('this.confirmPassValue',this.confirmPassValue);
+// if(this.passwordValue===this.confirmPassValue){
+//   this.isMatch=true;
+//   }else{
+//     this.isMatch=false;
+//   }
+//   };
 
 
  signUp(ownerSignUpFormData:any){
@@ -88,40 +93,48 @@ if(this.passwordValue===this.confirmPassValue){
 
   let requestData={
 
-    FirstName : this.ownerSignUpForm.value.firstName?.split(" ").join(""),
+    FirstName : this.ownerSignUpForm.value.firstName?.replace(/\s+/g," ").trim(),
 
-    LastName : this.ownerSignUpForm.value.lastName?.split(" ").join(""),
+    LastName : this.ownerSignUpForm.value.lastName?.replace(/\s+/g," ").trim(),
 
-    Email : this.ownerSignUpForm.value.Email?.split(" ").join(""),
+    Email : this.ownerSignUpForm.value.Email?.replace(/\s+/g," ").trim(),
 
-    MobileNo : this.ownerSignUpForm.value.MobileNo?.split(" ").join(""),
+    MobileNo : this.ownerSignUpForm.value.MobileNo?.replace(/\s+/g," ").trim(),
 
-    PanCardDetails : this.ownerSignUpForm.value.panDetails?.split(" ").join(""),
+    PanCardDetails : this.ownerSignUpForm.value.panDetails?.replace(/\s+/g," ").trim(),
 
-    Gender : this.ownerSignUpForm.value.Gender?.split(" ").join(""),
+    Gender : this.ownerSignUpForm.value.Gender,
 
-    Address: this.ownerSignUpForm.value.Address?.split(" ").join(""),
+    Address: this.ownerSignUpForm.value.Address?.replace(/\s+/g," ").trim(),
 
-    City: this.ownerSignUpForm.value.City?.split(" ").join(""),
+    City: this.ownerSignUpForm.value.City?.replace(/\s+/g," ").trim(),
 
-    PostalCode: this.ownerSignUpForm.value.PostalCode?.split(" ").join(""),
+    PostalCode: this.ownerSignUpForm.value.PostalCode?.replace(/\s+/g," ").trim(),
 
-    Password: this.ownerSignUpForm.value.Password?.split(" ").join(""),
+    Password: this.ownerSignUpForm.value.Password?.replace(/\s+/g),
 
-    ConfirmPassword: this.ownerSignUpForm.value.ConfirmPassword?.split(" ").join(""),
+    ConfirmPassword: this.ownerSignUpForm.value.ConfirmPassword?.replace(/\s+/g),
 
   };
 
      this.apiCallService.postData(this.endpoint,requestData).subscribe((response)=>{
+      console.log("response=>",response);
+      this.postApiSignupData=response});
+      console.log("this.postApiSignupData",this.postApiSignupData);
 
-      this.postApiSignupData=response})
+      this.route.navigateByUrl("ownersuccess/ownersuccess");
 
-console.log("this.postApiSignupData",this.postApiSignupData);
-
+//       if(this.postApiSignupData?.id){
+//         console.log("this.postApiSignupData?.id=>",this.postApiSignupData?.id)
+        
+//         this.route.navigateByUrl("ownersuccess/ownersuccess")
+//       }
+//       else{
+//         this.route.navigateByUrl("ownerSignUp/ownerSignUp")
+//       };
  };
 
-
- }
+}
 
 
 
