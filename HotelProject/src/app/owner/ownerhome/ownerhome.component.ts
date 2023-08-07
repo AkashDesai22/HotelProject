@@ -53,9 +53,18 @@ this.endpoint=this.commonService.journey;
    if(this.getOwnerResponse){
     this.isValidUser();
     if(this.validUser){
+      this.commonService.sucessToaster('LogIn Successfully','Welcome...',{
+        timeOut: 10000,
+        positionClass: 'toast-top-right'
+      })
       this.route.navigateByUrl("owner/ownersuccess");
     }
     else{
+        this.commonService.warningToaster('Please Enter Correct LogIn Details','Warning',{
+          timeOut: 10000,
+          positionClass: 'toast-top-right'
+        })
+      
       this.route.navigateByUrl("owner")
     }
    }

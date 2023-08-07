@@ -29,19 +29,28 @@
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title class="title">{{hotelData.HotelName}}</mat-card-title>
-      <mat-card-subtitle class="location">Location : {{hotelData.City}}</mat-card-subtitle>
+      <mat-card-subtitle class="location"> <mat-icon class="icon">room</mat-icon>{{hotelData.City}}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="/assets/HotelProjectImages/ownerbackground.jpg" alt="{{hotelData.HotelName}}">
     <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
+        <mat-icon class="icon"> call</mat-icon>&nbsp;<span class="displayHotelData">{{hotelData.ContactNo}}</span>
+        <br>
+        <mat-icon class="icon"> email</mat-icon>&nbsp;<span class="displayHotelData">{{hotelData.HotelEmail}}</span>
+        <br>
+        <mat-icon class="icon"> restaurant_menu</mat-icon>&nbsp;<span class="displayHotelData">{{hotelData.HotelMenue}}</span>
+        <br>
+        <mat-icon class="icon">home</mat-icon>&nbsp;<span class="displayHotelData">Rooms Available: &nbsp;{{hotelData.RoomsAvailable}}</span>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
+      <button *ngIf="showHide" class="delitbtn" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button *ngIf="showHide" class="editbtn" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+        <mat-icon >edit</mat-icon>
+      </button>
+      <button class="verticalDot" (click)="verticalDot" mat-icon-button color="black" aria-label="Example icon button with a menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
     </mat-card-actions>
   </mat-card>
   <br>

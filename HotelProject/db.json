@@ -111,6 +111,54 @@
       "RoomsAvailable": 41,
       "Password": "Akash@123",
       "id": 5
+    },
+    {
+      "OwnerFirstName": "Pankaj",
+      "OwnerLastName": "Desai",
+      "HotelName": "Pankaj Hotel",
+      "HotelEmail": "pankaj@gmail.com",
+      "ContactNo": "9730405335",
+      "PanDetails": "AZLPD8741P",
+      "HotelAddress": "Karad,Maharashtra",
+      "City": "Karad",
+      "PostalCode": "415111",
+      "State": "Maharashtra",
+      "HotelMenue": "Veg",
+      "RoomsAvailable": 140,
+      "Password": "Pankaj@123",
+      "id": 6
+    },
+    {
+      "OwnerFirstName": "Pankaj",
+      "OwnerLastName": "Desai",
+      "HotelName": "Alankar Restuarant",
+      "HotelEmail": "alankar@gmail.com",
+      "ContactNo": "9730405335",
+      "PanDetails": "AZLPD1215A",
+      "HotelAddress": "Karad,Satara",
+      "City": "Karad",
+      "PostalCode": "415111",
+      "State": "Maharashtra",
+      "HotelMenue": "Veg & Nonveg",
+      "RoomsAvailable": 25,
+      "Password": "Pankaj@123",
+      "id": 7
+    },
+    {
+      "OwnerFirstName": "Pankaj",
+      "OwnerLastName": "Desai",
+      "HotelName": "Sahyadri Hotel In",
+      "HotelEmail": "sahyadri@gmail.com",
+      "ContactNo": "9730405335",
+      "PanDetails": "AZLPD5241A",
+      "HotelAddress": "Pune,Maharashtra",
+      "City": "Pune",
+      "PostalCode": "412587",
+      "State": "Maharashtra",
+      "HotelMenue": "Veg",
+      "RoomsAvailable": 12,
+      "Password": "Pankaj@123",
+      "id": 8
     }
   ]
 }

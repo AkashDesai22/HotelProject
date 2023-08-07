@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators,} from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApicallService } from 'Common/apicall.service';
+import { CommonService } from 'Common/common.service';
 
 @Component({
   selector: 'app-hotelregistration',
@@ -59,7 +60,8 @@ export class HotelregistrationComponent {
 
   constructor(private route:Router,
             private formBuilder:FormBuilder,
-            private apicall:ApicallService){};
+            private apicall:ApicallService,
+            private commonService:CommonService){};
 
   ngOnInit(){
     this.HotelRegistraionFormData()
@@ -129,6 +131,10 @@ export class HotelregistrationComponent {
       console.log("this.hotelPostData=>",this.hotelPostData);
       
     });
+    this.commonService.sucessToaster('Hotel Details Saved Successfully','Congratulations...!',{
+      timeOut: 10000,
+      positionClass: 'toast-top-right'
+    })
       this.route.navigateByUrl("owner/ownersuccess"); 
 
   };

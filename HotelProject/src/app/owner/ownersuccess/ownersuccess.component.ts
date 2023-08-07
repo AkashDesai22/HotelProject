@@ -18,6 +18,7 @@ export class OwnersuccessComponent {
   ownerLoginData:any;
   userHotelsList:any[]=[];
  showTable:any;
+ showHide:boolean=true;
 
 
   constructor(private route:Router,
@@ -48,12 +49,12 @@ export class OwnersuccessComponent {
         if(this.userHotelsList.length>0){
 
         }
-        // else{
-        //   this.commonService.warningToaster('No Any Hotel Available','Warning',{
-        //     timeOut: 10000,
-        //     positionClass: 'toast-top-left'
-        //   })
-        // }
+        else{
+          this.commonService.warningToaster('No Any Hotel Details Available','Warning',{
+            timeOut: 10000,
+            positionClass: 'toast-top-right'
+          })
+        }
         }
       //   else{
       //     alert("No Owner Data Available")
@@ -74,6 +75,10 @@ export class OwnersuccessComponent {
   hotelRegistrationForm(){
     this.route.navigateByUrl("owner/HotelRegistration")
   };
+
+  verticalDot(){
+    this.showHide = !this.showHide;
+  }
 
 
   
