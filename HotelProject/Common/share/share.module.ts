@@ -14,6 +14,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatSelectModule} from '@angular/material/select';
 import { ToastrModule } from 'ngx-toastr';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -38,7 +39,7 @@ import { MatCardModule } from '@angular/material/card';
     MatSelectModule,
     MatCardModule,
     ToastrModule.forRoot(),
-  
+    MatDialogModule,
 
   ],
 
@@ -57,6 +58,7 @@ import { MatCardModule } from '@angular/material/card';
     MatDividerModule,
     MatSelectModule,
     MatCardModule,
+    MatDialogModule,
     
   
   ],

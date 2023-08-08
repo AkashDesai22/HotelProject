@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ApicallService } from 'Common/apicall.service';
 import { CommonService } from 'Common/common.service';
+import { DialogComponent } from '../dialog/dialog.component';
 
 
 
@@ -27,7 +29,8 @@ export class OwnersuccessComponent {
 
   constructor(private route:Router,
               private apiCall:ApicallService,
-              private commonService:CommonService,){};
+              private commonService:CommonService,
+              public dialog: MatDialog){};
 
 
   ngOnInit(){
@@ -83,11 +86,26 @@ export class OwnersuccessComponent {
   };
 
   async delitRecord(id:any){
+
+    const dialogRef = this.dialog.open(DialogComponent, {
+      // data: {id:id},
+       width: '250px',
+       height:'200px'
+       
+     });
+
+     dialogRef.afterClosed().subscribe((yesValue:any)=>{
+      if(yesValue==='YES'){
+        this.deletHotelData(id);
+        this.myHotelDetails();
+        this.showTable = !this.showTable;
+      }
+     })
+  };
+
+  async deletHotelData(id:any){
     let endpoint="HotelDetails";
     await this.apiCall.deleteApiCall(endpoint,id).toPromise();
-    this.myHotelDetails();
-    this.showTable = !this.showTable;
-
   };
 
  async editRecord(id:any){

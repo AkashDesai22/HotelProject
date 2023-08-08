@@ -7,6 +7,7 @@ import { ShareModule } from 'Common/share/share.module';
 import { OwnersignupComponent } from './ownersignup/ownersignup.component';
 import { OwnersuccessComponent } from './ownersuccess/ownersuccess.component';
 import { HotelregistrationComponent } from './hotelregistration/hotelregistration.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 
@@ -15,7 +16,8 @@ import { HotelregistrationComponent } from './hotelregistration/hotelregistratio
     OwnerhomeComponent,
     OwnersignupComponent,
     OwnersuccessComponent,
-    HotelregistrationComponent
+    HotelregistrationComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,
