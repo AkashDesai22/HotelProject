@@ -256,7 +256,7 @@
             && !ownerSignUpForm.get('Password')?.valid
             && !ownerSignUpForm.get('Password')?.errors?.['pattern']">Please Enter Minimum 8 Characters</mat-error>
             <mat-error
-            *ngIf="!isMatch && ownerSignUpForm.get('Password')?.dirty
+            *ngIf="!isMatch &&  ownerSignUpForm.get('Password')?.dirty
             && !ownerSignUpForm.get('Password')?.errors?.['pattern']">Password Not Matched</mat-error>
           </mat-form-field>
           <br>

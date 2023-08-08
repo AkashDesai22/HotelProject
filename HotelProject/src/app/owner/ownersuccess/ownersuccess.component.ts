@@ -5,6 +5,7 @@ import { ApicallService } from 'Common/apicall.service';
 import { CommonService } from 'Common/common.service';
 
 
+
 @Component({
   selector: 'app-ownersuccess',
   templateUrl: './ownersuccess.component.html',
@@ -18,7 +19,10 @@ export class OwnersuccessComponent {
   ownerLoginData:any;
   userHotelsList:any[]=[];
  showTable:any;
- showHide:boolean=true;
+ showHide:boolean=false;
+ getHotelDataById:any;
+ 
+
 
 
   constructor(private route:Router,
@@ -29,6 +33,7 @@ export class OwnersuccessComponent {
   ngOnInit(){
     console.log("ngOnInitCalling......");
   this.ownerLoginData= this.commonService.useLoginData;
+
  
   };
 
@@ -56,9 +61,6 @@ export class OwnersuccessComponent {
           })
         }
         }
-      //   else{
-      //     alert("No Owner Data Available")
-      // }
    };
 
    hotelDetailsByOwner(){
@@ -78,7 +80,25 @@ export class OwnersuccessComponent {
 
   verticalDot(){
     this.showHide = !this.showHide;
-  }
+  };
+
+  async delitRecord(id:any){
+    let endpoint="HotelDetails";
+    await this.apiCall.deleteApiCall(endpoint,id).toPromise();
+    this.myHotelDetails();
+    this.showTable = !this.showTable;
+
+  };
+
+ async editRecord(id:any){
+   this.commonService.id=id;
+   let endpoint="HotelDetails";
+   this.getHotelDataById=await this.apiCall.getApiCall(endpoint,id).toPromise()
+   this.commonService.HotelDataById=this.getHotelDataById;
+
+   this.route.navigateByUrl("owner/HotelRegistration")
+
+  };
 
 
   

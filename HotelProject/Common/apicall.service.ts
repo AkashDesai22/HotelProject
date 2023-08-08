@@ -20,10 +20,24 @@ url:string= "http://localhost:3000/";
 
   };
 
-  getApiCall(endpoint:any){
-    let url=this.url+ endpoint;
-
+  getApiCall(endpoint:any,id?:any){
+    let url=id?this.url+endpoint+'/'+id : this.url+ endpoint;
    return this.http.get(url);
-    
-  }
+   };
+
+   deleteApiCall(endpoint:any,id:any){
+    let url=this.url+endpoint+'/'+id;
+    return this.http.delete(url);
+
+   };
+
+   patchApiCall(endpoint:any,request:any,id:any){
+
+    let url=this.url+endpoint+'/'+id;
+
+   return this.http.patch(url,request)
+
+   }
+
+
 }

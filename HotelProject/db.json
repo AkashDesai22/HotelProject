@@ -67,8 +67,8 @@
     {
       "OwnerFirstName": "Akash",
       "OwnerLastName": "Desai",
-      "HotelName": "Sai 5Star Plaza",
-      "HotelEmail": "sai@gmail.com",
+      "HotelName": "Golden Palace",
+      "HotelEmail": "goldenpalace@gmail.com",
       "ContactNo": "9850004598",
       "PanDetails": "AZLPD6780A",
       "HotelAddress": "Mumbai,Maharashtra",
@@ -97,22 +97,6 @@
       "id": 4
     },
     {
-      "OwnerFirstName": "Akash",
-      "OwnerLastName": "Desai",
-      "HotelName": "my Plaza",
-      "HotelEmail": "myplaza@gmail.com",
-      "ContactNo": "9850004598",
-      "PanDetails": "AZLPD4581D",
-      "HotelAddress": "Kolhapur,Maharashtra",
-      "City": "Kolhapur",
-      "PostalCode": "415651",
-      "State": "Maharashtra",
-      "HotelMenue": "Veg",
-      "RoomsAvailable": 41,
-      "Password": "Akash@123",
-      "id": 5
-    },
-    {
       "OwnerFirstName": "Pankaj",
       "OwnerLastName": "Desai",
       "HotelName": "Pankaj Hotel",
@@ -131,34 +115,18 @@
     {
       "OwnerFirstName": "Pankaj",
       "OwnerLastName": "Desai",
-      "HotelName": "Alankar Restuarant",
-      "HotelEmail": "alankar@gmail.com",
+      "HotelName": "DimondKing Bengluru",
+      "HotelEmail": "DimondKing@gmail.com",
       "ContactNo": "9730405335",
-      "PanDetails": "AZLPD1215A",
-      "HotelAddress": "Karad,Satara",
-      "City": "Karad",
-      "PostalCode": "415111",
-      "State": "Maharashtra",
-      "HotelMenue": "Veg & Nonveg",
-      "RoomsAvailable": 25,
-      "Password": "Pankaj@123",
-      "id": 7
-    },
-    {
-      "OwnerFirstName": "Pankaj",
-      "OwnerLastName": "Desai",
-      "HotelName": "Sahyadri Hotel In",
-      "HotelEmail": "sahyadri@gmail.com",
-      "ContactNo": "9730405335",
-      "PanDetails": "AZLPD5241A",
-      "HotelAddress": "Pune,Maharashtra",
-      "City": "Pune",
-      "PostalCode": "412587",
-      "State": "Maharashtra",
+      "PanDetails": "AZLPD4525A",
+      "HotelAddress": "Benglore,Karnataka",
+      "City": "Benglore",
+      "PostalCode": "521412",
+      "State": "Karnataka",
       "HotelMenue": "Veg",
       "RoomsAvailable": 12,
       "Password": "Pankaj@123",
-      "id": 8
+      "id": 7
     }
   ]
 }

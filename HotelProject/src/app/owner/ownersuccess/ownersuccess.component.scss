@@ -123,11 +123,22 @@
 
 };
 
+.verticalDot{
+  margin-left: 0px;
+}
+
+.verticalDot:hover{
+  background-color:#8A9A5B;
+  // border: 1px solid black;
+
+};
+
+
 .delitbtn{
   height: 40px;
   width: 40px;
-  margin-left: 245px;
-  margin-right: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
 
 };
 
@@ -148,13 +159,6 @@
   background-color: skyblue;
 };
 
-.verticalDot{
-  margin-left: 5px;
-}
 
-.verticalDot:hover{
-  background-color:#8A9A5B;
-  border: 1px solid black;
-};
 
 

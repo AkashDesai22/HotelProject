@@ -42,14 +42,14 @@
         <mat-icon class="icon">home</mat-icon>&nbsp;<span class="displayHotelData">Rooms Available: &nbsp;{{hotelData.RoomsAvailable}}</span>
     </mat-card-content>
     <mat-card-actions>
-      <button *ngIf="showHide" class="delitbtn" mat-fab color="primary" aria-label="Example icon button with a delete icon">
-        <mat-icon>delete</mat-icon>
-      </button>
-      <button *ngIf="showHide" class="editbtn" mat-fab color="primary" aria-label="Example icon button with a delete icon">
-        <mat-icon >edit</mat-icon>
-      </button>
-      <button class="verticalDot" (click)="verticalDot" mat-icon-button color="black" aria-label="Example icon button with a menu icon">
+      <button class="verticalDot" (click)="verticalDot()" mat-icon-button color="black" aria-label="Example icon button with a menu icon">
         <mat-icon>menu</mat-icon>
+      </button>
+      <button *ngIf="showHide" class="delitbtn" (click)="delitRecord(hotelData.id)" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+        <mat-icon >delete</mat-icon>
+      </button>
+      <button *ngIf="showHide" class="editbtn" (click)="editRecord(hotelData.id)" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+        <mat-icon >edit</mat-icon>
       </button>
     </mat-card-actions>
   </mat-card>
@@ -59,9 +59,7 @@
 </div>
 <br>
 <br>
-
-
-  </div>
+ </div>
 
 </mat-drawer-container>
 </div>
