@@ -1,60 +1,60 @@
 .navbar{
-    width: 100%;
+    width: 120%;
+    height: 60px;
     background-color: #7a10dd;
+     position: relative; 
+    // height: 95px;
     display:flex;
     justify-content:space-between;
-    padding-right: 5%;
-    height: 60px;
-    position: relative;
+    // padding-right: 5%;
     align-items: center;
-    margin: 0%; 
-    margin-right: 0%;
+    // margin: 0%; 
+    // margin-right: 0%;
    
-
 };
 
 .logo{
     height: 139px;
     width: 155px;
-    margin-left: -79px;
-    padding-top: 11px;
+    margin-left: -5px;
+    position: absolute;
+    margin-top: -65px;
 };
 
 .navbar h1 a{
     font-family: math;
-    font-size: 31px;
+    font-size: 40px;
     font-weight: bolder;
     color: white;
     text-shadow: 3.8px 0.8px black;
     text-decoration: none;
-    margin: -1%;
-    padding-top: 5px;
     position: absolute;
-    margin-left: -48px;
-  
+    margin-top: -7px;
+    // padding-left: -23px;
+    margin-left: -1260px;
 };
 
 
 .navbar h1 span{
     font-family: math;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bolder;
     color:  #FFEB3B;
-   padding-top: 2px;
+//    padding-top: 2px;
 };
 
 .navbar div{
     position: absolute;
-    margin-left: 187px;
+    margin-left: 350px;
 }
 
 .navbar .searchbar input{
     color: rgb(0, 0, 0);
     border: 2px solid black;
-    height: 35px;
+    height: 37px;
     border-right: 0px;
-    width: 400px;
-    margin-top: 1px;
+    width: 380px;
+    margin-top: 1.7px;
     margin-left: 70px;
     border-radius: 10px;
     padding-left: 15px;
@@ -65,10 +65,10 @@
 .navbar .searchbar button {
     color: rgb(255, 255, 255);
     background-color: #7a10dd;
-    height: 42px;
+    height: 39px;
     width: 97px;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 6px;
     margin-left: -13px;
     margin-right: 10px;
     font-family: auto;
@@ -77,10 +77,12 @@
 };
 
 .navbar ul{
+    position: absolute;
     display: inline-flex;
     list-style: none;
-    margin-left: 780px;
-    padding: 0px;
+    // margin-right: -1130px;
+    margin-top: 10px;
+    margin-left: 900px
 };
 
 .navbar li{
@@ -102,7 +104,7 @@
 
 .navbar .searchbar button:hover {
     cursor: pointer;
-    height: 44px;
+    height: 41px;
     width: 100px;
     
     

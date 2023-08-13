@@ -15,6 +15,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { ToastrModule } from 'ngx-toastr';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgIf } from '@angular/common';
 
 
 
@@ -40,6 +42,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatCardModule,
     ToastrModule.forRoot(),
     MatDialogModule,
+    NgbCarouselModule,
+    NgIf,
 
   ],
 
@@ -59,6 +63,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSelectModule,
     MatCardModule,
     MatDialogModule,
+    NgbCarouselModule,
+    NgIf
     
   
   ],

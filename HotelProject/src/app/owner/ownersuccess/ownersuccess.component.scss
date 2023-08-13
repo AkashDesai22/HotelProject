@@ -1,9 +1,9 @@
 
 .example-container {
-  width: 1650px;
+  width: 1380px;
   height: 1650px;
   background-color:  #fff1e6;
-  padding-left: 150px;
+  padding-left: 15px;
  
 
 };
@@ -14,21 +14,21 @@
   align-items: center;
   justify-content: center;
   margin-top:auto;
- 
+ margin-left: -930px;
 
 };
 
 .button{
     margin-top: -1585px;
-    margin-left: -1360px;
+    margin-left: -10px;
 
 };
 
 .homeIcon{
     background-color: #DC143C;
     color: white;
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
    padding: 10px 12px 10px 12px;
    border-radius: 5px;
    margin-top: 20px;
@@ -71,7 +71,7 @@
 .example-card {
   max-width: 400px;
   background-color: #ff77ff;
-  box-shadow: 0 0 20px 10px #df00ff ;
+  box-shadow: 0 0 20px 10px #df00ff;
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 8px;

@@ -25,17 +25,17 @@ export class OwnerhomeComponent {
               private commonService:CommonService,
               private apicall:ApicallService){};
 
-  ngOnInit(){
-this.ownerLoginData();
-this.endpoint=this.commonService.journey;
-  };
-  
 
+  ngOnInit(){
+    this.ownerLoginData();
+    this.endpoint=this.commonService.journey;
+
+  };
   
   ownerLoginData(){
     this.ownerLoginForm=this.fb.group({
      
-      Email:['',[]],
+      Email:['',[Validators.required]],
 
       Password:['',[Validators.required,]],
     })
@@ -43,12 +43,10 @@ this.endpoint=this.commonService.journey;
 
 
   ownerLogIn(ownerLoginForm:any){
-   console.log("ownerLoginForm=======>",ownerLoginForm.value);
-   
+
   if(this.ownerLoginForm.value.Email){
     this.commonService.useLoginData=this.ownerLoginForm.value.Email;
   };
-
    this.getOwnerData();
    if(this.getOwnerResponse){
     this.isValidUser();
@@ -70,11 +68,13 @@ this.endpoint=this.commonService.journey;
    }
   };
 
-  getOwnerData(){
+ getOwnerData(){
     this.apicall.getApiCall(this.endpoint).subscribe((response)=>{
       this.getOwnerResponse=response;
-      console.log("this.getOwnerResponse=>",this.getOwnerResponse);
+      console.log("GetApiResponse==>",this.getOwnerResponse);
+    
     })
+    
   };
 
   isValidUser(){

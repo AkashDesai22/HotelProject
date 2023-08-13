@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonService } from 'Common/common.service';
+import { ShareModule } from 'Common/share/share.module';
+
 
 @Component({
   selector: 'app-homescreen',
@@ -8,13 +10,15 @@ import { CommonService } from 'Common/common.service';
   styleUrls: ['./homescreen.component.scss']
 })
 export class HomescreenComponent {
+  
+images=["/assets/HotelProjectImages/main.png" ,"/assets/HotelProjectImages/Mumbai.png", "/assets/HotelProjectImages/Goa.png" ,"/assets/HotelProjectImages/Pune.png", "/assets/HotelProjectImages/Delhi.png" , "/assets/HotelProjectImages/Gujrat.png"]
 
 
 
   constructor( private  route : Router,
-               private commonService : CommonService){};
+               private commonService : CommonService,){};
 
-  ngOnInit(){};
+   ngOnInit(){};
 
   journey(journey:string){
     

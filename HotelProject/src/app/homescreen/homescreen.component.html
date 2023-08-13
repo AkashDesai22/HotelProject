@@ -1,8 +1,44 @@
-
+<div>
+<ngb-carousel *ngIf="images">
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img class="image" [src]="images[0]" alt="Hotelwala.com" />
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img class="image" [src]="images[1]" alt="Hotelwala.com" />
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img class="image" [src]="images[2]" alt="Hotelwala.com" />
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img class="image" [src]="images[3]" alt="Hotelwala.com" />
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img class="image" [src]="images[4]" alt="Hotelwala.com" />
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img class="image" [src]="images[5]" alt="Hotelwala.com" />
+		</div>
+	</ng-template>
+</ngb-carousel>
+</div>
+<br>
+<span class="span-login-text">Please,LogIn Here...</span>
+<div class="button">
 <button (click)="journey('user')" mat-raised-button color="accent">User</button>
 
-<button (click)="journey('owner')" mat-raised-button color="accent">Owner</button>
+<button (click)="journey('owner')" class="btn1" mat-raised-button color="accent">Owner</button>
 
-<button (click)="journey('admin')" mat-raised-button color="accent">Admin</button>
-
+<button (click)="journey('admin')" class="btn1"  mat-raised-button color="accent">Admin</button>
+</div>
 
