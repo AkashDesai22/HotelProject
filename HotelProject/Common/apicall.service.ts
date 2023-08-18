@@ -37,7 +37,12 @@ url:string= "http://localhost:3000/";
 
    return this.http.patch(url,request)
 
-   }
+   };
+
+   showHotelDetails(){
+    
+    return this.http.get("http://localhost:3000/HotelDetails?_limit=5");
+   };
 
 
 }

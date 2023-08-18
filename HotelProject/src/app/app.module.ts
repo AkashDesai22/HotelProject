@@ -8,6 +8,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { HeaderComponent } from './header/header.component';
 import { ShareModule } from 'Common/share/share.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     HomescreenComponent,
     HeaderComponent,
+    FooterComponent,
   
   ],
   imports: [

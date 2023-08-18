@@ -19,7 +19,7 @@ export class OwnersuccessComponent {
   // showFiller = false;
   HotelDetails!:any;
   ownerLoginData:any;
-  userHotelsList:any[]=[];
+userHotelsList:any[]=[];
  showTable:any;
  showHide:boolean=false;
  getHotelDataById:any;

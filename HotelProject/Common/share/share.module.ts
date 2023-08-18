@@ -21,6 +21,7 @@ import { NgIf } from '@angular/common';
 
 
 
+
 @NgModule({
   declarations: [],
 
@@ -45,6 +46,7 @@ import { NgIf } from '@angular/common';
     NgbCarouselModule,
     NgIf,
 
+
   ],
 
   exports:[
@@ -64,7 +66,9 @@ import { NgIf } from '@angular/common';
     MatCardModule,
     MatDialogModule,
     NgbCarouselModule,
-    NgIf
+    NgIf,
+  
+  
     
   
   ],

@@ -1,4 +1,5 @@
-<div>
+<div class="allPage">
+<div class="slider">
 <ngb-carousel *ngIf="images">
 	<ng-template ngbSlide>
 		<div class="picsum-img-wrapper">
@@ -33,12 +34,44 @@
 </ngb-carousel>
 </div>
 <br>
-<span class="span-login-text">Please,LogIn Here...</span>
-<div class="button">
-<button (click)="journey('user')" mat-raised-button color="accent">User</button>
-
-<button (click)="journey('owner')" class="btn1" mat-raised-button color="accent">Owner</button>
-
-<button (click)="journey('admin')" class="btn1"  mat-raised-button color="accent">Admin</button>
+<ng-template  #content let-offcanvas>
+	<div class="offcanvas-header">
+		<button type="button" class="btn-close" mat-fab color="warn" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+	</div>
+	<div class="button">
+		<button (click)="journey('user')" class="btnsize"  mat-raised-button color="accent">User</button>
+		
+		<button (click)="journey('owner')"  class="btn1" mat-raised-button color="accent">Owner</button>
+		
+		<button (click)="journey('admin')" class="btn1"  mat-raised-button color="accent">Admin</button>
+		</div>
+		<div class="welcome">
+			<h2>Welcome back,let's get started...!</h2>
+		</div>
+</ng-template>
+<div class="containerBox">
+<div class="card" style="width: 15rem;" *ngFor="let hotelData of HotelsList">
+	<img class="card-img-top" src="/assets/HotelProjectImages/ownerbackground.jpg" alt="Hotelwala.Com">
+	
+	  <h3 class="card-title">{{hotelData.HotelName}}</h3>
+	  <mat-card-content>
+		<mat-card-subtitle class="displayHotelData"> <mat-icon class="icon">room</mat-icon> {{ hotelData.City}}</mat-card-subtitle>
+		<br>
+        <mat-icon class="icon"> call</mat-icon>&nbsp;<span class="displayHotelData">{{hotelData.ContactNo}}</span>
+        <br>
+        <mat-icon class="icon"> email</mat-icon>&nbsp;<span class="displayHotelData">{{hotelData.HotelEmail}}</span>
+        <br>
+        <mat-icon class="icon"> restaurant_menu</mat-icon>&nbsp;<span class="displayHotelData">{{hotelData.HotelMenue}}</span>
+        <br>
+        <mat-icon class="icon">home</mat-icon>&nbsp;<span class="displayHotelData">Rooms Available: &nbsp;{{hotelData.RoomsAvailable}}</span>
+		<br>
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a routerLink="#" class="BookNowBtn" mat-raised-button color="accent">Book Now</a>
+    </mat-card-content>
+  </div>
 </div>
-
+<br>
+<br>
+<br>
+<button class="btn btn-lg btn-outline-primary mb-2 me-2 span-login-text" (click)="openBottom(content)">LogIn Here and Unlock Your World...!</button>
+</div>

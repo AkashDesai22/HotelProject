@@ -1,0 +1,35 @@
+.footer{
+    display: flex;
+    width: 120%;
+    height: 80px;
+    background-color: #7a10dd;
+};
+
+.footer h1 a{
+    font-family: math;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 3.8px 0.8px black;
+    text-decoration: none;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 45%;
+};
+
+
+.footer h1 span{
+    font-family: math;
+    font-size: 30px;
+    font-weight: bolder;
+    color:  #FFEB3B;
+//    padding-top: 2px;
+};
+
+.footerData{
+    color:rgb(180, 175, 175);
+    font-family: math;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 37.5%;
+};
