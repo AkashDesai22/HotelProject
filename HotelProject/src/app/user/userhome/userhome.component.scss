@@ -1,0 +1,94 @@
+.userLoginContainer{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 300px;
+}
+
+
+div img{
+    position: relative;
+    margin-top: 30px;
+    margin-left: -500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 400px;
+    width: 400px;
+};
+
+
+.dispalyContent h1{
+    font-family: math;
+    font-size: 65px;
+    color: black;
+    text-shadow: 7.8px -0.2px #fbe803;
+    text-decoration: none;
+    font-weight: 900;
+    margin-left: -470px;
+ 
+};
+
+.dispalyContent span{
+    font-family: math;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #2b10ff;
+    text-shadow: 2.8px 0.8px #c11717;
+};
+
+div p{
+    font-family: cursive;
+    // font-family: inherit;
+    font-size: 23px;
+    font-weight: bolder;
+    margin-left: -370px;
+};
+
+div form{
+    margin-top: -32%;
+    margin-left: 200px;
+    position: absolute;
+    height: 380px;
+    padding-top: 15px;
+    padding-left: 4px;
+    width: 380px;
+    background: #e9cfec;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+};
+
+form mat-form-field{
+    height: 80px;
+    width: 333px;
+};
+form span{
+    font-family: emoji;
+    font-weight: bolder;
+    font-size: 32px;
+    text-shadow: 1px 2px yellow;
+};
+
+.submitbutton{
+    width: 335px;
+    color: white;
+    border: 2px solid rgb(14, 4, 51);
+};
+
+form p{
+    padding-left: 400px;
+    text-align: center;
+    font-family: math;
+    text-decoration: none;
+    font-size: 15px;
+};
+
+form a{
+    text-decoration: none;
+};
+
+form a:hover{
+    font-size: 18px;
+    color: #c11717;
+    cursor: pointer;
+};

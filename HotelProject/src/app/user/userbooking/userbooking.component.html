@@ -1,0 +1,22 @@
+
+<div class="containerBox">
+    <div class="card" style="width: 17rem;" *ngFor="let hotelData of HotelsList">
+        <img class="card-img-top" src="/assets/HotelProjectImages/ownerbackground.jpg" alt="Hotelwala.Com">
+        
+          <h3 class="card-title">{{hotelData.HotelName}}</h3>
+          <mat-card-content>
+            <mat-card-subtitle class="displayHotelData"> <mat-icon class="icon">room</mat-icon> {{ hotelData.City}}</mat-card-subtitle>
+            <br>
+            <mat-icon class="icon"> call</mat-icon>&nbsp;<span class="displayHotelData">{{hotelData.ContactNo}}</span>
+            <br>
+            <mat-icon class="icon"> email</mat-icon>&nbsp;<span class="displayHotelData">{{hotelData.HotelEmail}}</span>
+            <br>
+            <mat-icon class="icon"> restaurant_menu</mat-icon>&nbsp;<span class="displayHotelData">{{hotelData.HotelMenue}}</span>
+            <br>
+            <mat-icon class="icon">home</mat-icon>&nbsp;<span class="displayHotelData">Rooms Available: &nbsp;{{hotelData.RoomsAvailable}}</span>
+            <br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a routerLink="#" class="BookNowBtn" mat-raised-button color="accent">Book Now</a>
+        </mat-card-content>
+      </div>
+    </div>

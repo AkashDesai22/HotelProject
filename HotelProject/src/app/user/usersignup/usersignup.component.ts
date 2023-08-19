@@ -5,13 +5,13 @@ import { ApicallService } from 'Common/apicall.service';
 import { CommonService } from 'Common/common.service';
 
 @Component({
-  selector: 'app-ownersignup',
-  templateUrl: './ownersignup.component.html',
-  styleUrls: ['./ownersignup.component.scss']
+  selector: 'app-usersignup',
+  templateUrl: './usersignup.component.html',
+  styleUrls: ['./usersignup.component.scss']
 })
-export class OwnersignupComponent {
+export class UsersignupComponent {
 
-  ownerSignUpForm!:FormGroup;
+  userSignUpForm!:FormGroup;
   isDisabled = true;
   hide = true;
   passwordValue:any;
@@ -33,13 +33,13 @@ console.log(".....................");
 this.endpoint=this.commonService.journey;
 console.log("this.endpoint=>",this.endpoint);
 
-this.ownerSignUpFormData();
+this.userSignUpFormData();
 
   };
 
-  ownerSignUpFormData(){
+  userSignUpFormData(){
 
-    this.ownerSignUpForm=this.formBuilder.group({
+    this.userSignUpForm=this.formBuilder.group({
 
       firstName : ["",[Validators.required,Validators.pattern("[a-zA-z]*$"),Validators.minLength(2)]],
 
@@ -87,33 +87,33 @@ this.ownerSignUpFormData();
 //   };
 
 
- signUp(ownerSignUpFormData:any){
+ signUp(userSignUpForm:any){
   
-  console.log('ownerSignUpFormData=>',ownerSignUpFormData);
+  console.log('userSignUpFormData=>',userSignUpForm);
 
   let requestData={
 
-    FirstName : this.ownerSignUpForm.value.firstName?.replace(/\s+/g," ").trim(),
+    FirstName : this.userSignUpForm.value.firstName?.replace(/\s+/g," ").trim(),
 
-    LastName : this.ownerSignUpForm.value.lastName?.replace(/\s+/g," ").trim(),
+    LastName : this.userSignUpForm.value.lastName?.replace(/\s+/g," ").trim(),
 
-    Email : this.ownerSignUpForm.value.Email?.replace(/\s+/g," ").trim(),
+    Email : this.userSignUpForm.value.Email?.replace(/\s+/g," ").trim(),
 
-    MobileNo : this.ownerSignUpForm.value.MobileNo?.replace(/\s+/g," ").trim(),
+    MobileNo : this.userSignUpForm.value.MobileNo?.replace(/\s+/g," ").trim(),
 
-    PanCardDetails : this.ownerSignUpForm.value.panDetails?.replace(/\s+/g," ").trim(),
+    PanCardDetails : this.userSignUpForm.value.panDetails?.replace(/\s+/g," ").trim(),
 
-    Gender : this.ownerSignUpForm.value.Gender,
+    Gender : this.userSignUpForm.value.Gender,
 
-    Address: this.ownerSignUpForm.value.Address?.replace(/\s+/g," ").trim(),
+    Address: this.userSignUpForm.value.Address?.replace(/\s+/g," ").trim(),
 
-    City: this.ownerSignUpForm.value.City?.replace(/\s+/g," ").trim(),
+    City: this.userSignUpForm.value.City?.replace(/\s+/g," ").trim(),
 
-    PostalCode: this.ownerSignUpForm.value.PostalCode?.replace(/\s+/g," ").trim(),
+    PostalCode: this.userSignUpForm.value.PostalCode?.replace(/\s+/g," ").trim(),
 
-    Password: this.ownerSignUpForm.value.Password?.replace(/\s+/g),
+    Password: this.userSignUpForm.value.Password?.replace(/\s+/g),
 
-    ConfirmPassword: this.ownerSignUpForm.value.ConfirmPassword?.replace(/\s+/g),
+    ConfirmPassword: this.userSignUpForm.value.ConfirmPassword?.replace(/\s+/g),
 
   };
 
@@ -122,7 +122,7 @@ this.ownerSignUpFormData();
       this.postApiSignupData=response});
       console.log("this.postApiSignupData",this.postApiSignupData);
 
-      this.route.navigateByUrl("owner/ownersuccess");
+      this.route.navigateByUrl("user/userBooking");
 
 //       if(this.postApiSignupData?.id){
 //         console.log("this.postApiSignupData?.id=>",this.postApiSignupData?.id)
@@ -135,6 +135,3 @@ this.ownerSignUpFormData();
  };
 
 }
-
-
-

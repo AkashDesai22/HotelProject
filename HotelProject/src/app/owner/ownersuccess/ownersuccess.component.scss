@@ -13,8 +13,10 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  margin-top:auto;
+  // margin-top: -700px;
+  // margin-top:auto;
  margin-left: -930px;
+// margin-left: 365px;
 
 };
 
@@ -57,7 +59,7 @@
   background-color: blueviolet;
   margin-top: 0px;
   width: 285px;
-  height: 100%;
+  height: 130%;
 
 };
 
@@ -157,6 +159,86 @@
 .editbtn:hover{
   color:red;
   background-color: skyblue;
+};
+
+.containerBox{
+
+  display: flex;
+  flex-wrap:wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  // margin-left: 35px;
+  margin-left: -75px;
+  margin-right: 15px;
+  margin-top: -1625px;
+};
+
+.card{
+  
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 100%;
+  height: 300px;
+  align-content: center;
+  justify-content: center;
+  padding: 10px 3px 10px 2px;
+  background-color: rgb(24, 134, 185);
+  height: 27rem;
+  border: 2px solid black;
+  margin-top: 15px;
+
+};
+
+
+.card-img-top{
+  margin: 1px 5px 5px 5px ;
+  border: 2px solid black;
+ 
+};
+
+.card-title{
+  background-color:yellow;
+  border-radius: 10px;
+  width: 14rem;
+  // padding: 2px 2px 2px 7px;
+  border: 2px solid black;
+  text-align: center;  
+
+};
+
+h3.card-title{
+  font-family: cursive;
+  font-size: larger;
+  justify-content: center;
+  align-items: center;
+};
+
+.displayHotelData {
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 15px;
+};
+
+.icon{
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+};
+
+.BookNowBtn{
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+   text-align: center;
+   margin-left: 28px;
+};
+
+.mat-mdc-card-content{
+  margin-left: -40px;
+  align-items: center;
+
 };
 
 

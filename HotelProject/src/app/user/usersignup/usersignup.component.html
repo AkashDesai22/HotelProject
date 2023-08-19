@@ -1,0 +1,309 @@
+
+
+<form [formGroup]="userSignUpForm">
+    <span>User SignUp</span>
+    <br>
+    <mat-form-field class="firstName" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input  matInput placeholder="Placeholder" formControlName="firstName" required>
+        <mat-error
+            *ngIf="userSignUpForm.get('firstName')?.touched
+            && !userSignUpForm.get('firstName')?.valid
+            && !userSignUpForm.get('firstName')?.dirty
+            && !userSignUpForm.get('firstName')?.errors?.['minlength']">First Name Is Required</mat-error>
+        <mat-error
+            *ngIf="userSignUpForm.get('firstName')?.dirty 
+            && userSignUpForm.get('firstName')?.touched
+            && !userSignUpForm.get('firstName')?.valid
+            && !userSignUpForm.get('firstName')?.errors?.['minlength']">First Name Is Required</mat-error> 
+            <mat-hint
+            *ngIf="userSignUpForm.get('firstName')?.errors?.['required']
+            && !userSignUpForm.get('firstName')?.valid
+            && !userSignUpForm.get('firstName')?.touched
+            && !userSignUpForm.get('firstName')?.dirty">Enter First Name</mat-hint>
+        <mat-error
+            *ngIf="userSignUpForm.get('firstName')?.errors?.['pattern']
+            && !userSignUpForm.get('firstName')?.errors?.['required']">Enter
+            Alphabates Only</mat-error>
+            <mat-error
+            *ngIf="userSignUpForm.get('firstName')?.errors?.['minlength']
+            && !userSignUpForm.get('firstName')?.valid
+            && !userSignUpForm.get('firstName')?.errors?.['pattern']
+            && !userSignUpForm.get('firstName')?.errors?.['required']">Enter Minimum 2 Characters
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field class="lastName" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="lastName">
+        <mat-error
+        *ngIf="userSignUpForm.get('lastName')?.touched
+        && !userSignUpForm.get('lastName')?.valid
+        && !userSignUpForm.get('lastName')?.dirty">Last Name Is Required</mat-error>
+        <mat-error
+            *ngIf="userSignUpForm.get('lastName')?.dirty 
+            && userSignUpForm.get('lastName')?.touched
+            && !userSignUpForm.get('lastName')?.valid
+            && !userSignUpForm.get('lastName')?.errors?.['minlength']">Last Name Is Required</mat-error>
+        <mat-hint
+        *ngIf="userSignUpForm.get('lastName')?.errors?.['required']
+        && !userSignUpForm.get('lastName')?.valid
+        && !userSignUpForm.get('lastName')?.touched
+        && !userSignUpForm.get('lastName')?.dirty">Enter Last Name</mat-hint>
+    <mat-error
+        *ngIf="userSignUpForm.get('lastName')?.errors?.['pattern']">Enter
+        Alphabates Only</mat-error>
+        <mat-error
+        *ngIf="userSignUpForm.get('lastName')?.errors?.['minlength']
+        && !userSignUpForm.get('lastName')?.valid
+        && !userSignUpForm.get('lastName')?.errors?.['pattern']">Enter Minimum 2 Characters
+    </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="Email" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="Email" placeholder="Ex. abc@example.com">
+        <mat-error
+            *ngIf="userSignUpForm.get('Email')?.touched
+            && !userSignUpForm.get('Email')?.valid
+            && !userSignUpForm.get('Email')?.dirty">Email is Required</mat-error>
+            <mat-error
+            *ngIf="userSignUpForm.get('Email')?.dirty 
+            && userSignUpForm.get('Email')?.touched
+            && !userSignUpForm.get('Email')?.valid
+            && !userSignUpForm.get('Email')?.errors?.['minlength']">Email Is Required</mat-error>
+            <mat-hint
+            *ngIf="userSignUpForm.get('Email')?.errors?.['required']
+            && !userSignUpForm.get('Email')?.valid
+            && !userSignUpForm.get('Email')?.touched
+            && !userSignUpForm.get('Email')?.dirty">Please Enter Your Email</mat-hint>
+        <mat-error
+            *ngIf="userSignUpForm.get('Email')?.errors?.['email'] "> Please Enter Correct Email
+        </mat-error>
+      </mat-form-field>
+      <br>
+        <mat-form-field class="MobileNo" appearance="outline">
+          <mat-label>Mobile Number</mat-label>
+          <h2 matPrefix> &nbsp;+91 &nbsp;</h2>
+          <input type="tel" matInput formControlName="MobileNo" placeholder="9876543210" maxlength="10">
+          <mat-error
+            *ngIf="userSignUpForm.get('MobileNo')?.touched
+            && !userSignUpForm.get('MobileNo')?.valid
+            && !userSignUpForm.get('MobileNo')?.dirty">Mobile Number is Required</mat-error>
+            <mat-error
+            *ngIf="userSignUpForm.get('MobileNo')?.dirty 
+            && userSignUpForm.get('MobileNo')?.touched
+            && !userSignUpForm.get('MobileNo')?.valid
+            && !userSignUpForm.get('MobileNo')?.errors?.['minlength']">Mobile Number Is Required</mat-error>
+            <mat-hint
+            *ngIf="userSignUpForm.get('MobileNo')?.errors?.['required']
+            && !userSignUpForm.get('MobileNo')?.valid
+            && !userSignUpForm.get('MobileNo')?.touched
+            && !userSignUpForm.get('MobileNo')?.dirty">Please Enter Your Mobile Number</mat-hint>
+            <mat-error *ngIf="userSignUpForm.get('MobileNo')?.errors?.['pattern']">Invalid Mobile Number</mat-error>
+            <mat-error *ngIf="userSignUpForm.get('MobileNo')?.errors?.['minlength']
+            && !userSignUpForm.get('MobileNo')?.valid
+            && !userSignUpForm.get('MobileNo')?.errors?.['pattern'] ">Enter Minimum 10 Numbers</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="Pancard" appearance="outline">
+            <mat-label>Pan Card Details</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="panDetails" required maxlength="10">
+            <mat-error
+                *ngIf="userSignUpForm.get('panDetails')?.touched
+                && !userSignUpForm.get('panDetails')?.valid
+                && !userSignUpForm.get('panDetails')?.dirty">PAN Card Details Required</mat-error>
+                <mat-error
+                *ngIf="userSignUpForm.get('panDetails')?.dirty 
+                && userSignUpForm.get('panDetails')?.touched
+                && !userSignUpForm.get('panDetails')?.valid
+                && !userSignUpForm.get('panDetails')?.errors?.['minlength']">PAN Card Details Required</mat-error>
+                <mat-hint
+                *ngIf="userSignUpForm.get('panDetails')?.errors?.['required']
+                && !userSignUpForm.get('panDetails')?.valid
+                && !userSignUpForm.get('panDetails')?.touched 
+                && !userSignUpForm.get('panDetails')?.dirty">Please Enter PAN Number</mat-hint>
+            <mat-error
+                *ngIf="userSignUpForm.get('panDetails')?.errors?.['pattern']">Invaid PAN Card Details</mat-error>
+                <mat-error
+                *ngIf="userSignUpForm.get('panDetails')?.errors?.['minlength']
+                && !userSignUpForm.get('panDetails')?.valid
+                && !userSignUpForm.get('panDetails')?.errors?.['pattern']">Enter Minimum 10 Characters
+            </mat-error>
+        </mat-form-field>
+        <br>
+          <label class="Gender">Gender: </label>
+          <mat-radio-group class="Gender" formControlName="Gender">
+            <!-- [checked]="isDisabled" -->
+            <mat-radio-button value="Male">Male</mat-radio-button>     
+            <mat-radio-button value="Female">Female</mat-radio-button>
+            <mat-radio-button value="Other">Other</mat-radio-button>
+            <br>
+            <mat-hint
+            *ngIf="!userSignUpForm.get('Gender')?.touched
+            && !userSignUpForm.get('Gender')?.dirty">Please Select Your Gender</mat-hint>
+          </mat-radio-group>
+        <br>
+        <br>
+        <mat-form-field class="Address" appearance="outline">
+            <mat-label>Address</mat-label>
+            <textarea formControlName="Address" matInput placeholder="Hose No,Street etc." required maxlength="50">Hose No,Apartment,Street</textarea>
+            <mat-error
+            *ngIf="userSignUpForm.get('Address')?.touched
+            && !userSignUpForm.get('firstName')?.valid
+            && !userSignUpForm.get('firstName')?.dirty
+            && !userSignUpForm.get('Address')?.errors?.['minlength']">Address Is Required</mat-error>
+            <mat-error
+            *ngIf="userSignUpForm.get('Address')?.dirty 
+            && userSignUpForm.get('Address')?.touched
+            && !userSignUpForm.get('Address')?.valid
+            && !userSignUpForm.get('Address')?.errors?.['minlength']">Address Is Required</mat-error>
+            <mat-hint
+            *ngIf="userSignUpForm.get('Address')?.errors?.['required']
+            && !userSignUpForm.get('Address')?.valid
+            && !userSignUpForm.get('Address')?.touched
+            && !userSignUpForm.get('Address')?.dirty">Please Enter Your Address</mat-hint>
+        <mat-error
+            *ngIf="userSignUpForm.get('Address')?.errors?.['pattern']
+            && !userSignUpForm.get('Address')?.errors?.['required']">Please Enter Correct Address</mat-error>
+            <mat-error
+            *ngIf="userSignUpForm.get('Address')?.errors?.['minlength']
+            && !userSignUpForm.get('Address')?.valid
+            && !userSignUpForm.get('Address')?.errors?.['pattern']
+            && !userSignUpForm.get('Address')?.errors?.['required']">Enter Minimum 10 Characters
+        </mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="City" appearance="outline">
+            <mat-label>City</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="City" required maxlength="25">
+            <mat-error
+                *ngIf="userSignUpForm.get('City')?.touched
+                && !userSignUpForm.get('City')?.valid
+                && !userSignUpForm.get('City')?.dirty">City is Required</mat-error>
+                <mat-error
+            *ngIf="userSignUpForm.get('City')?.dirty 
+            && userSignUpForm.get('City')?.touched
+            && !userSignUpForm.get('City')?.valid
+            && !userSignUpForm.get('City')?.errors?.['minlength']">City Is Required</mat-error>
+                <mat-hint
+                *ngIf="userSignUpForm.get('City')?.errors?.['required']
+                && !userSignUpForm.get('City')?.valid
+                && !userSignUpForm.get('City')?.touched
+                && !userSignUpForm.get('City')?.dirty">Enter Your City</mat-hint>
+            <mat-error
+                *ngIf="userSignUpForm.get('City')?.errors?.['pattern']">Enter
+                Alphabates Only</mat-error>
+                <mat-error
+                *ngIf="userSignUpForm.get('City')?.errors?.['minlength']
+                && !userSignUpForm.get('City')?.valid
+                && !userSignUpForm.get('City')?.errors?.['pattern']">Enter Minimum 2 Characters
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="PostalCode" appearance="outline">
+            <mat-label>Postal Code</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="PostalCode" required maxlength="6">
+            <mat-error
+            *ngIf="userSignUpForm.get('PostalCode')?.touched
+            && !userSignUpForm.get('PostalCode')?.valid
+            && !userSignUpForm.get('PostalCode')?.dirty">Postal Code Required</mat-error>
+            <mat-error
+            *ngIf="userSignUpForm.get('PostalCode')?.dirty 
+            && userSignUpForm.get('PostalCode')?.touched
+            && !userSignUpForm.get('PostalCode')?.valid
+            && !userSignUpForm.get('PostalCode')?.errors?.['minlength']">PostalCode Is Required</mat-error>
+            <mat-hint
+            *ngIf="userSignUpForm.get('PostalCode')?.errors?.['required']
+            && !userSignUpForm.get('PostalCode')?.valid
+            && !userSignUpForm.get('PostalCode')?.touched
+            && !userSignUpForm.get('PostalCode')?.dirty">Enter Postal Code</mat-hint>
+        <mat-error
+            *ngIf="userSignUpForm.get('PostalCode')?.errors?.['pattern']">Enter
+            Numbers Only</mat-error>
+            <mat-error
+            *ngIf="userSignUpForm.get('PostalCode')?.errors?.['minlength']
+            && !userSignUpForm.get('PostalCode')?.valid
+            && !userSignUpForm.get('PostalCode')?.errors?.['pattern']">Enter 6 Numbers
+        </mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="Password" appearance="outline">
+            <mat-label>Enter Your Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="Password" value="Password" autocomplete="off" required placeholder="pass@123">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error
+            *ngIf="userSignUpForm.get('Password')?.touched
+            && !userSignUpForm.get('Password')?.valid
+            && !userSignUpForm.get('Password')?.dirty
+            && !userSignUpForm.get('Password')?.errors?.['pattern']">Password is Required</mat-error>
+            <mat-error
+            *ngIf="userSignUpForm.get('Password')?.dirty 
+            && userSignUpForm.get('Password')?.touched
+            && !userSignUpForm.get('Password')?.valid
+            && !userSignUpForm.get('Password')?.errors?.['minlength']
+            && !userSignUpForm.get('Password')?.errors?.['pattern']">Password Is Required</mat-error>
+            <mat-hint
+            *ngIf="userSignUpForm.get('Password')?.errors?.['required']
+            && !userSignUpForm.get('Password')?.valid
+            && !userSignUpForm.get('Password')?.touched
+            && !userSignUpForm.get('Password')?.dirty">Please Enter Your Password</mat-hint>
+            <mat-error
+            *ngIf="userSignUpForm.get('Password')?.errors?.['pattern']
+            && !userSignUpForm.get('Password')?.errors?.['required']">Password Pattern Not Matched</mat-error>
+            <mat-error
+            *ngIf="userSignUpForm.get('Password')?.errors?.['minlength']
+            && !userSignUpForm.get('Password')?.valid
+            && !userSignUpForm.get('Password')?.errors?.['pattern']">Please Enter Minimum 8 Characters</mat-error>
+            <mat-error
+            *ngIf="!isMatch &&  userSignUpForm.get('Password')?.dirty
+            && !userSignUpForm.get('Password')?.errors?.['pattern']">Password Not Matched</mat-error>
+          </mat-form-field>
+          <br>
+          <br>
+          <mat-form-field class="ConfirmPassword" appearance="outline">
+            <mat-label>Confirm Your Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="ConfirmPassword" value="ConfirmPassword" autocomplete="off" required placeholder="pass@123" >
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error
+            *ngIf="userSignUpForm.get('ConfirmPassword')?.touched
+            && !userSignUpForm.get('ConfirmPassword')?.valid
+            && !userSignUpForm.get('ConfirmPassword')?.dirty
+            && !userSignUpForm.get('ConfirmPassword')?.errors?.['pattern']">Confirm Your Password</mat-error>
+            <mat-error
+            *ngIf="userSignUpForm.get('ConfirmPassword')?.dirty 
+            && userSignUpForm.get('ConfirmPassword')?.touched
+            && !userSignUpForm.get('ConfirmPassword')?.valid
+            && !userSignUpForm.get('ConfirmPassword')?.errors?.['minlength']
+            && !userSignUpForm.get('ConfirmPassword')?.errors?.['pattern']">Confirm Your Password</mat-error>
+            <mat-hint
+            *ngIf="userSignUpForm.get('ConfirmPassword')?.errors?.['required']
+            && !userSignUpForm.get('ConfirmPassword')?.valid
+            && !userSignUpForm.get('ConfirmPassword')?.touched
+            && !userSignUpForm.get('ConfirmPassword')?.dirty">Please Confirm Your Password</mat-hint>
+            <mat-error
+            *ngIf="userSignUpForm.get('ConfirmPassword')?.errors?.['pattern']">Password Pattern Not Matched</mat-error>
+            <mat-error
+            *ngIf="userSignUpForm.get('ConfirmPassword')?.errors?.['minlength']
+            && !userSignUpForm.get('ConfirmPassword')?.valid
+            && !userSignUpForm.get('ConfirmPassword')?.errors?.['pattern']">Please Enter Minimum 8 Characters</mat-error>
+            <mat-error
+            *ngIf="(!isMatch) && !userSignUpForm.get('ConfirmPassword')?.errors?.['pattern']
+            && !userSignUpForm.get('ConfirmPassword')?.errors?.['required']">Password Not Matched</mat-error>
+          </mat-form-field>
+        <br>
+        <br>
+        <button class="submitbutton" [disabled]="!userSignUpForm.valid" (click)="signUp(userSignUpForm.value)"
+          mat-raised-button color="accent">SignUp</button>
+          <br>
+          <br>
+          <p>Already have an Account? <a routerLink="/owner">LogIn Now</a></p>
+      
+</form>
+
+
+
+
+

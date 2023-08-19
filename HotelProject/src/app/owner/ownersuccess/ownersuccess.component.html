@@ -25,7 +25,8 @@
     </button>
   <div class="showHotelDetails" *ngIf="showTable">
   <div *ngIf="userHotelsList.length > 0 && showTable">
-  <mat-card *ngFor="let hotelData of userHotelsList" class="example-card">
+
+  <!-- <mat-card *ngFor="let hotelData of userHotelsList" class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title class="title">{{hotelData.HotelName}}</mat-card-title>
@@ -52,7 +53,41 @@
         <mat-icon >edit</mat-icon>
       </button>
     </mat-card-actions>
-  </mat-card>
+  </mat-card> -->
+  <div class="containerBox">
+    <div class="card" style="width: 17rem;" *ngFor="let hotelData of userHotelsList">
+        <img class="card-img-top" src="/assets/HotelProjectImages/ownerbackground.jpg" alt="Hotelwala.Com">
+        
+          <h3 class="card-title">{{hotelData.HotelName}}</h3>
+          <mat-card-content>
+            <mat-card-subtitle class="displayHotelData"> <mat-icon class="icon">room</mat-icon> {{ hotelData.City}}</mat-card-subtitle>
+            <br>
+            <mat-icon class="icon"> call</mat-icon>&nbsp;<span class="displayHotelData">{{hotelData.ContactNo}}</span>
+            <br>
+            <mat-icon class="icon"> email</mat-icon>&nbsp;<span class="displayHotelData">{{hotelData.HotelEmail}}</span>
+            <br>
+            <mat-icon class="icon"> restaurant_menu</mat-icon>&nbsp;<span class="displayHotelData">{{hotelData.HotelMenue}}</span>
+            <br>
+            <mat-icon class="icon">home</mat-icon>&nbsp;<span class="displayHotelData">Rooms Available: &nbsp;{{hotelData.RoomsAvailable}}</span>
+            <br>
+            <br>
+            <mat-card-actions>
+              <button class="verticalDot" (click)="verticalDot()" mat-icon-button color="black" aria-label="Example icon button with a menu icon">
+                <mat-icon>menu</mat-icon>
+              </button>
+              <button *ngIf="showHide" class="delitbtn" (click)="delitRecord(hotelData.id)" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                <mat-icon >delete</mat-icon>
+              </button>
+              <button *ngIf="showHide" class="editbtn" (click)="editRecord(hotelData.id)" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                <mat-icon >edit</mat-icon>
+              </button>
+            </mat-card-actions>
+            
+        </mat-card-content>
+      </div>
+    </div>
+
+
   <br>
 <br>
 </div>

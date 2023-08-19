@@ -1,5 +1,20 @@
 {
-  "User": [],
+  "User": [
+    {
+      "FirstName": "Akash",
+      "LastName": "Desai",
+      "Email": "akash@gmail.com",
+      "MobileNo": "9850004598",
+      "PanCardDetails": "AZLPD7484A",
+      "Gender": "Male",
+      "Address": "Karad,Maharashtra",
+      "City": "Karad",
+      "PostalCode": "415111",
+      "Password": "Akash@123",
+      "ConfirmPassword": "Akash@123",
+      "id": 1
+    }
+  ],
   "Owner": [
     {
       "FirstName": "Akash",
@@ -28,9 +43,25 @@
       "Password": "Pankaj@123",
       "ConfirmPassword": "Pankaj@123",
       "id": 2
+    },
+    {
+      "FirstName": "Ajay",
+      "LastName": "Mane",
+      "Email": "ajay@gmail.com",
+      "MobileNo": "9967568463",
+      "PanCardDetails": "AZLPD7484Z",
+      "Gender": "Male",
+      "Address": "New Mumbai,Maharashtra",
+      "City": "Vashi",
+      "PostalCode": "416520",
+      "Password": "Ajay@123",
+      "ConfirmPassword": "Ajay@123",
+      "id": 3
     }
   ],
   "Admin": [],
+
+  
   "HotelDetails": [
     {
       "OwnerFirstName": "Akash",
@@ -127,6 +158,22 @@
       "RoomsAvailable": 12,
       "Password": "Pankaj@123",
       "id": 7
+    },
+    {
+      "OwnerFirstName": "Ajay",
+      "OwnerLastName": "Mane",
+      "HotelName": "Ajay7Star Plaza",
+      "HotelEmail": "7starplaza@gmail.com",
+      "ContactNo": "9967568463",
+      "PanDetails": "AZLAM6874Z",
+      "HotelAddress": "New Mumbai,Maharashtra",
+      "City": "Vashi",
+      "PostalCode": "416520",
+      "State": "Maharashtra",
+      "HotelMenue": "Veg",
+      "RoomsAvailable": 32,
+      "Password": "Ajay@123",
+      "id": 8
     }
   ]
 }
